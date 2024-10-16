@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+
+    <div class="calculator_box projectinvestment_calc">
+        <div class="calculator_form">
+            <div class="tab">
+                <button class="tablinks tab_button active" onclick="openCity(event, 'Booking')">Booking</button>
+                <button class="tablinks tab_button" onclick="openCity(event, 'Payment_Estimates')">Payment
+                    Estimates</button>
+                    
+            </div>
+            <div id="Booking" class="tabcontent booking content_tab">
+                
+                <div class="buc_price">
+                    <label>BUC Price</label>
+                    <input type="text" placeholder="Enter the bus price" id="amount_value" value="100000"
+                        class="dollar-icon-input">
+                </div>
+                <div class="Progressive-box-content">
+                    <div class="Progressive-line">
+                        <p>Within 2 Weeks</p>
+                    </div>
+                    <div class="vertical-tab">
+                        <div class="Progressive-content">
+                            <h6>PAY 5%> RECEIVE OTP (CHEQUE / CASHIER'S ORDER-CO)</h6>
+                            <p>Confirm law firm details and forward OTP copy to banker and lawfirm</p>
+                            <div class="input_colms">
+                                <div class="form_group">
+                                    <label>Enter Booking date</label>
+                                    <input type="date" onchange="change_amount()" id="current_date">
+                                </div>
+                                <div class="form_group">
+                                    <label>Deposit Amount (5%)</label>
+                                    <input type="number" id="diposit_amount" placeholder="0" class="dollar-icon-input">
+                                </div>
+                            </div>
+                            <div class="Progressive-line">
+                                <p>WITHIN 3 WEEKS</p>
+                            </div>
+                            <div class="input_colms">
+                                <div class="form_group">
+                                    <label>Cancellation Penalty (1.25%)</label>
+                                    <input type="text" id="cancellation" placeholder="0" class="dollar-icon-input">
+                                </div>
+                                <div class="form_group">
+                                    <label>Refundable (3.75%)</label>
+                                    <input type="text" id="refundable" placeholder="0" class="dollar-icon-input">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Progressive-box-content">
+                    <div class="Progressive-line">
+                        <p class="third-line">Within 2 Weeks</p>
+                    </div>
+                    <div class="vertical-tab light-dot-sec">
+                        <div class="Progressive-content">
+                            <h6>Receive S&P</h6>
+                            <p>Confirm law firm details and forward OTP copy to banker and lawfirm. Ensure LO is signed
+                                prior to
+                                meeting law firm to exercise S&P</p>
+                            <div class="input_colms">
+                                <div class="form_group">
+                                    <label>3 Days from booking</label>
+                                    <input type="text" id="three_day" placeholder="Select Date" class="disabled">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Progressive-box-content">
+                    <div class="vertical-tab light-dot-third">
+                        <div class="Progressive-content">
+                            <h6>Exercise S&P</h6>
+                            <p>Ensure LO is signed prior to meeting law firm to exercise S&P. Ensure law firm apply CPF
+                                usage
+                                for stamp duty to IRAS + 15% completion, if applicable.</p>
+                            <div class="input_colms">
+                                <div class="form_group">
+                                    <label>21 Days from receive S&P</label>
+                                    <input type="text" id="two_weeks" placeholder="Select Date" class="disabled">
+                                </div>
+                            </div>
+                            <div class="Progressive-line">
+                                <p class="text-black pt-md-5 mt-md-5">Completion</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Progressive-box-content">
+                    <div class="vertical-tab light-dot-four">
+                        <div class="Progressive-content">
+                            <h6>Pay Stamp Duty (Cheque/CO/CPF)</h6>
+                            <p>Ensure law firm apply CPF usage for stamp duty to IRAS + 15% completion, if applicable.
+                                Purchaser
+                                to pay balance down payment + progressive payment.</p>
+                            <div class="input_colms">
+                                <div class="form_group">
+                                    <label>14 Days from Exercise S&P</label>
+                                    <input type="text" id="complation" placeholder="Select Date" class="disabled">
+                                </div>
+                                <div class="form_group">
+                                    <label>BSD + ABSD, if applicable</label>
+                                    <input type="text" id="bsd" placeholder="0" class="dollar-icon-input">
+                                </div>
+                                <div class="form_group">
+                                    <label>BSD - Buyers Stamp Duty</label>
+                                    <input type="text" id="bsd1" placeholder="0" class="dollar-icon-input">
+                                </div>
+                                <div class="form_group">
+                                    <div class="Buyers-stemp">
+                                        <label>ABSD-Additional Buyers Stamp Duty</label>
+                                        <span class="more_options">More options</span>
+                                    </div>
+                                    <input type="text" value="0.00" id="absd" placeholder="0" class="dollar-icon-input">
+                                </div>
+                            </div>
+                            <div class="Progressive-line">
+                                <p class="text-black pt-md-5 mt-md-5 pb-md-5">COMPLETION OF FOUNDATION WORK</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Progressive-box-content">
+                    <div class="Progressive-line"></div>
+                    <div class="vertical-tab light-dot-four">
+                        <div class="Progressive-content">
+                            <h6>Pay 15% (Cheque/CO/CPF)</h6>
+                            <p>Purchaser to pay balance down payment + progressive payment. Developer will call for
+                                payment
+                                progressively.</p>
+                            <div class="input_colms">
+                                <div class="form_group">
+                                    <label>8 Weeks from Booking:</label>
+                                    <input type="text" id="eight_weeks" placeholder="Select Date" class="disabled">
+                                </div>
+                                <div class="form_group">
+                                    <label>Sum of 20% + SD</label>
+                                    <input type="text" id="fifteen_persant" placeholder="0" class="dollar-icon-input">
+                                </div>
+                                <div class="form_group">
+                                    <label>Total Outlay</label>
+                                    <input type="text" id="total_sd" placeholder="0" class="dollar-icon-input">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Progressive-box-content">
+                    <div class="Progressive-line last-line"></div>
+                    <div class="vertical-tab light-dot-six">
+                        <div class="Progressive-content">
+                            <h6>Pay 5% + 5% Loan (Cheque/CO/CPF/Cash/Loan)</h6>
+                            <p>Developer will call for payment progressively.</p>
+                            <div class="input_colms">
+                                <div class="form_group">
+                                    <label>Enter Launch Date</label>
+                                    <input type="text" id="launch_date" placeholder="Select Date" class="disabled">
+                                </div>
+                                <div class="form_group">
+                                    <label>Est. Foundation Stage <span>(6 Months from launch)</span>:</label>
+                                    <input type="text" id="stage" placeholder="Start Date" class="disabled">
+                                </div>
+                                <div class="form_group">
+                                    <label>Foundation Stage Top Up <span>(Cash CPF for LTV 75% to 70%)</span>:</label>
+                                    <input type="text" id="five_persant" placeholder="0" class="dollar-icon-input">
+                                </div>
+                                <div class="form_group">
+                                    <label>Additional Top Up:</label>
+                                    <input type="text" id="five_persant" value="0" placeholder="0"
+                                        class="dollar-icon-input">
+                                </div>
+                                <div class="form_group">
+                                    <label>Total Cash/CPF <span>(Cash/CPF for LTV below 70%)</span>:</label>
+                                    <input type="text" id="total_cpf" placeholder="0" class="dollar-icon-input">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="Payment_Estimates" class="tabcontent content_tab" style="display: none;">
+                <!-- table  -->
+                <div class="container">
+                    <input type="number" id="bucInput" value="10000" min="1000" />
+                    <span id="error_message" style="color: red;"></span>
+            
+            
+            
+                    <table border="1px solid black" align="center" style="border-collapse: collapse;">
+                        <thead>
+                            <tr>
+                                <th>Stage</th>
+                                <th>Estimated Period From Launch</th>
+                                <th>Amount Disbursed by Cash/CPF</th>
+                                <th>Loan Disbursed by Bank %</th>
+                                <th>Amount Disbursed by Bank</th>
+                                <th>Estimated Monthly Interest</th>
+                                <th>Estimated Monthly Principal</th>
+                                <th>Est Monthly Mortgage Repayment</th>
+                            </tr>
+                            <tfoot>
+                                <tr>
+                                    <td><b>Total:-</b></td>
+                                    <td></td>
+                                    <td>$0</td>
+                                    <td>$0</td>
+                                    <td>$0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tfoot>
+                        </thead>
+                        <tbody id="paymentTable">
+                            <!-- Rows will be added here by JS -->
+                           
+                        </tbody>
+                    </table>
+                </div>
+                <!-- table end  -->
+            </div>
+        </div>
+    </div>
+    <div class="more_option_model fade">
+        <div class="model_inner">
+            <div class="model_body">
+                <div class="tab">
+                    <button class="tablinks tab_links active" onclick="openModel(event, 'Single')">Single</button>
+                    <button class="tablinks tab_links" onclick="openModel(event, 'JointMarried')">Joint
+                        (Married)</button>
+                    <button class="tablinks tab_links" onclick="openModel(event, 'JointOthers')">Joint (Others)</button>
+                </div>
+                <div id="Single" class="tabcontent tab_content">
+                    <div class="input_colms">
+                        <div class="form_group">
+                            <label>Buying For</label>
+                            <select name="" id="single_buying">
+                                <option value="0">First Property</option>
+                                <option value="1">Second Property</option>
+                                <option value="2">Third Property</option>
+                                <option value="3">Fourth Property</option>
+                            </select>
+                        </div>
+                        <div class="form_group">
+                            <label>Buyer Profile</label>
+                            <select name="" id="single_profile">
+                                <option value="0">SG Citizen/(US,NO,CH,IS,LI)</option>
+                                <option value="1">Singapore PR</option>
+                                <option value="2">Foreigner</option>
+                                <option value="3">Company Entity</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" id="" class="calcButton" onclick="proceed_btn()">Proceed</button>
+                </div>
+                <div id="JointMarried" class="tabcontent tab_content" style="display: none;">
+                    <div class="input_colms">
+                        <div class="form_group">
+                            <label>Buying For</label>
+                            <select name="" id="Joint_buying1">
+                                <option value="0">First Property</option>
+                                <option value="1">Second Property</option>
+                                <option value="2">Third Property</option>
+                                <option value="3">Fourth Property</option>
+                            </select>
+                        </div>
+                        <div class="form_group">
+                            <label>Buyer Profile</label>
+                            <select name="" id="Joint_profile">
+                                <option value="0">SG Citizen/(US,NO,CH,IS,LI)</option>
+                                <option value="1">Singapore PR</option>
+                                <option value="2">Foreigner</option>
+                                <option value="3">Company Entity</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input_colms">
+                        <div class="form_group">
+                            <label>Buying For</label>
+                            <select name="" id="Joint_buying2">
+                                <option value="0">First Property</option>
+                                <option value="1">Second Property</option>
+                                <option value="2">Third Property</option>
+                                <option value="3">Fourth Property</option>
+                            </select>
+                        </div>
+                        <div class="form_group">
+                            <label>Buyer Profile</label>
+                            <select name="" id="Joint_profile2">
+                                <option value="0">SG Citizen/(US,NO,CH,IS,LI)</option>
+                                <option value="1">Singapore PR</option>
+                                <option value="2">Foreigner</option>
+                                <option value="3">Company Entity</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" id="" class="calcButton" onclick="proceed_btn1()">Proceed</button>
+                </div>
+                <div id="JointOthers" class="tabcontent tab_content" style="display: none;">
+                    <div class="input_colms">
+                        <div class="form_group">
+                            <label>Buying For</label>
+                            <select name="" id="others_buying">
+                                <option value="0">First Property</option>
+                                <option value="1">Second Property</option>
+                                <option value="2">Third Property</option>
+                                <option value="3">Fourth Property</option>
+                            </select>
+                        </div>
+                        <div class="form_group">
+                            <label>Buyer Profile</label>
+                            <select name="" id="other_profile">
+                                <option value="0">SG Citizen/(US,NO,CH,IS,LI)</option>
+                                <option value="1">Singapore PR</option>
+                                <option value="2">Foreigner</option>
+                                <option value="3">Company Entity</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input_colms">
+                        <div class="form_group">
+                            <label>Buying For</label>
+                            <select name="" id="others_buying2">
+                                <option value="0">First Property</option>
+                                <option value="1">Second Property</option>
+                                <option value="2">Third Property</option>
+                                <option value="3">Fourth Property</option>
+                            </select>
+                        </div>
+                        <div class="form_group">
+                            <label>Buyer Profile</label>
+                            <select name="" id="other_profile2">
+                                <option value="0">SG Citizen/(US,NO,CH,IS,LI)</option>
+                                <option value="1">Singapore PR</option>
+                                <option value="2">Foreigner</option>
+                                <option value="3">Company Entity</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" id="" class="calcButton" onclick="proceed_btn2()">Proceed</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        jQuery(".more_options").click(function () {
+            jQuery('.more_option_model').addClass('show_pop');
+        })
+        //this is the code when click on more option 
+        var single = function sjCitijan(twentypersant, thertypersant, fivepersant, thirty, thirtyfive, sixty_persant, sixty_five_persant, absd) {
+            // check the single value in SG Citizen/(US,NO,CH,IS,LI)
+            if (document.getElementById("single_buying").value == "0" && document.getElementById("single_profile").value == "0") {
+                absd.value = "$0";
+            } else if (document.getElementById("single_buying").value == "1" && document.getElementById("single_profile").value == "0") {
+                absd.value = twentypersant;
+            } else if (document.getElementById("single_buying").value == "2" && document.getElementById("single_profile").value == "0") {
+                absd.value = thertypersant;
+            } else if (document.getElementById("single_buying").value == "3" && document.getElementById("single_profile").value == "0") {
+                absd.value = thertypersant;
+            }
+            // check the single value in Singapore PR
+
+            if (document.getElementById("single_buying").value == "0" && document.getElementById("single_profile").value == "1") {
+                absd.value = fivepersant;
+            } else if (document.getElementById("single_buying").value == "1" && document.getElementById("single_profile").value == "1") {
+                absd.value = thirty;
+            } else if (document.getElementById("single_buying").value == "2" && document.getElementById("single_profile").value == "1") {
+                absd.value = thirtyfive;
+            } else if (document.getElementById("single_buying").value == "3" && document.getElementById("single_profile").value == "1") {
+                absd.value = thirtyfive;
+            }
+
+            // check the single value in forginer 
+            if (document.getElementById("single_buying").value == "0" && document.getElementById("single_profile").value == "2") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("single_buying").value == "1" && document.getElementById("single_profile").value == "2") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("single_buying").value == "2" && document.getElementById("single_profile").value == "2") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("single_buying").value == "3" && document.getElementById("single_profile").value == "2") {
+                absd.value = sixty_persant;
+            }
+            // check the single value in company entity 
+            if (document.getElementById("single_buying").value == "0" && document.getElementById("single_profile").value == "3") {
+                absd.value = sixty_five_persant;
+            } else if (document.getElementById("single_buying").value == "1" && document.getElementById("single_profile").value == "3") {
+                absd.value = sixty_five_persant;
+            } else if (document.getElementById("single_buying").value == "2" && document.getElementById("single_profile").value == "3") {
+                absd.value = sixty_five_persant;
+            } else if (document.getElementById("single_buying").value == "3" && document.getElementById("single_profile").value == "3") {
+                absd.value = sixty_five_persant;
+            }
+        }
+
+        var joint = function sjCitijan(twentypersant, thertypersant, fifty_persant, thirtyfive, sixty_persant, sixty_five_persant) {
+            // 1
+            if (document.getElementById("Joint_buying1").value == "0" && document.getElementById("Joint_profile").value == "0") {
+                absd.value = "0";
+            } else if (document.getElementById("Joint_buying1").value == "1" && document.getElementById("Joint_profile").value == "0") {
+                absd.value = twentypersant;
+            } else if (document.getElementById("Joint_buying1").value == "2" && document.getElementById("Joint_profile").value == "0") {
+                absd.value = thertypersant;
+            } else if (document.getElementById("Joint_buying1").value == "3" && document.getElementById("Joint_profile").value == "0") {
+                absd.value = thertypersant;
+            }
+            if (document.getElementById("Joint_buying2").value == "0" && document.getElementById("Joint_profile2").value == "0") {
+                absd.value = "0";
+            } else if (document.getElementById("Joint_buying2").value == "1" && document.getElementById("Joint_profile2").value == "0") {
+                absd.value = twentypersant;
+            } else if (document.getElementById("Joint_buying2").value == "2" && document.getElementById("Joint_profile2").value == "0") {
+                absd.value = thertypersant;
+            } else if (document.getElementById("Joint_buying2").value == "3" && document.getElementById("Joint_profile2").value == "0") {
+                absd.value = thertypersant;
+            }
+            // 2
+            if (document.getElementById("Joint_buying1").value == "0" && document.getElementById("Joint_profile").value == "2") {
+                absd.value = fifty_persant;
+            } else if (document.getElementById("Joint_buying1").value == "1" && document.getElementById("Joint_profile").value == "2") {
+                absd.value = thertypersant;
+            } else if (document.getElementById("Joint_buying1").value == "2" && document.getElementById("Joint_profile").value == "2") {
+                absd.value = thirtyfive;
+            } else if (document.getElementById("Joint_buying1").value == "3" && document.getElementById("Joint_profile").value == "2") {
+                absd.value = thirtyfive;
+            }
+            if (document.getElementById("Joint_buying2").value == "0" && document.getElementById("Joint_profile2").value == "2") {
+                absd.value = fifty_persant;
+            } else if (document.getElementById("Joint_buying2").value == "1" && document.getElementById("Joint_profile2").value == "2") {
+                absd.value = thertypersant;
+            } else if (document.getElementById("Joint_buying2").value == "2" && document.getElementById("Joint_profile2").value == "2") {
+                absd.value = thirtyfive;
+            } else if (document.getElementById("Joint_buying2").value == "3" && document.getElementById("Joint_profile2").value == "2") {
+                absd.value = thirtyfive;
+            }
+            // 3 
+            if (document.getElementById("Joint_buying1").value == "0" && document.getElementById("Joint_profile").value == "3") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("Joint_buying1").value == "1" && document.getElementById("Joint_profile").value == "3") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("Joint_buying1").value == "2" && document.getElementById("Joint_profile").value == "3") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("Joint_buying1").value == "3" && document.getElementById("Joint_profile").value == "3") {
+                absd.value = sixty_persant;
+            }
+            if (document.getElementById("Joint_buying2").value == "0" && document.getElementById("Joint_profile2").value == "3") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("Joint_buying2").value == "1" && document.getElementById("Joint_profile2").value == "3") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("Joint_buying2").value == "2" && document.getElementById("Joint_profile2").value == "3") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("Joint_buying2").value == "3" && document.getElementById("Joint_profile2").value == "3") {
+                absd.value = sixty_persant;
+            }
+            // 4 
+            if (document.getElementById("Joint_buying1").value == "0" && document.getElementById("Joint_profile").value == "3") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("Joint_buying1").value == "1" && document.getElementById("Joint_profile").value == "3") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("Joint_buying1").value == "2" && document.getElementById("Joint_profile").value == "3") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("Joint_buying1").value == "3" && document.getElementById("Joint_profile").value == "3") {
+                absd.value = sixty_persant;
+            }
+            if (document.getElementById("Joint_buying2").value == "0" && document.getElementById("Joint_profile2").value == "3") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("Joint_buying2").value == "1" && document.getElementById("Joint_profile2").value == "3") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("Joint_buying2").value == "2" && document.getElementById("Joint_profile2").value == "3") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("Joint_buying2").value == "3" && document.getElementById("Joint_profile2").value == "3") {
+                absd.value = sixty_persant;
+            }
+            // 5 
+            if (document.getElementById("Joint_buying1").value == "0" && document.getElementById("Joint_profile").value == "4") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("Joint_buying1").value == "1" && document.getElementById("Joint_profile").value == "4") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("Joint_buying1").value == "2" && document.getElementById("Joint_profile").value == "4") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("Joint_buying1").value == "3" && document.getElementById("Joint_profile").value == "4") {
+                absd.value = sixty_persant;
+            }
+            if (document.getElementById("Joint_buying2").value == "0" && document.getElementById("Joint_profile2").value == "4") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("Joint_buying2").value == "1" && document.getElementById("Joint_profile2").value == "4") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("Joint_buying2").value == "2" && document.getElementById("Joint_profile2").value == "4") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("Joint_buying2").value == "3" && document.getElementById("Joint_profile2").value == "4") {
+                absd.value = sixty_persant;
+            }
+        }
+
+        var joint_others = function sjCitijan(twentypersant, thertypersant, fivepersant, thirtyfive, sixty_persant, sixty_five_persant) {
+            if (document.getElementById("others_buying").value == "0" && document.getElementById("other_profile").value == "0") {
+                absd.value = "0";
+            } else if (document.getElementById("others_buying").value == "1" && document.getElementById("other_profile").value == "0") {
+                absd.value = twentypersant;
+            } else if (document.getElementById("others_buying").value == "2" && document.getElementById("other_profile").value == "0") {
+                absd.value = thertypersant;
+            } else if (document.getElementById("others_buying").value == "3" && document.getElementById("other_profile").value == "0") {
+                absd.value = thertypersant;
+            }
+            if (document.getElementById("others_buying2").value == "0" && document.getElementById("other_profile2").value == "0") {
+                absd.value = "0";
+            } else if (document.getElementById("others_buying2").value == "1" && document.getElementById("other_profile2").value == "0") {
+                absd.value = twentypersant;
+            } else if (document.getElementById("others_buying2").value == "2" && document.getElementById("other_profile2").value == "0") {
+                absd.value = thertypersant;
+            } else if (document.getElementById("others_buying2").value == "3" && document.getElementById("other_profile2").value == "0") {
+                absd.value = thertypersant;
+            }
+            // 2
+            if (document.getElementById("others_buying").value == "0" && document.getElementById("other_profile").value == "1") {
+                absd.value = fivepersant;
+            } else if (document.getElementById("others_buying").value == "1" && document.getElementById("other_profile").value == "1") {
+                absd.value = thertypersant;
+            } else if (document.getElementById("others_buying").value == "2" && document.getElementById("other_profile").value == "1") {
+                absd.value = thirtyfive;
+            } else if (document.getElementById("others_buying").value == "3" && document.getElementById("other_profile").value == "1") {
+                absd.value = thirtyfive;
+            }
+            if (document.getElementById("others_buying2").value == "0" && document.getElementById("other_profile2").value == "1") {
+                absd.value = fivepersant;
+            } else if (document.getElementById("others_buying2").value == "1" && document.getElementById("other_profile2").value == "1") {
+                absd.value = thertypersant;
+            } else if (document.getElementById("others_buying2").value == "2" && document.getElementById("other_profile2").value == "1") {
+                absd.value = thirtyfive;
+            } else if (document.getElementById("others_buying2").value == "3" && document.getElementById("other_profile2").value == "1") {
+                absd.value = thirtyfive;
+            }
+            // 3
+            if (document.getElementById("others_buying").value == "0" && document.getElementById("other_profile").value == "2") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("others_buying").value == "1" && document.getElementById("other_profile").value == "2") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("others_buying").value == "2" && document.getElementById("other_profile").value == "2") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("others_buying").value == "3" && document.getElementById("other_profile").value == "2") {
+                absd.value = sixty_persant;
+            }
+            if (document.getElementById("others_buying2").value == "0" && document.getElementById("other_profile2").value == "2") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("others_buying2").value == "1" && document.getElementById("other_profile2").value == "2") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("others_buying2").value == "2" && document.getElementById("other_profile2").value == "2") {
+                absd.value = sixty_persant;
+            } else if (document.getElementById("others_buying2").value == "3" && document.getElementById("other_profile2").value == "2") {
+                absd.value = sixty_persant;
+            }
+            // 4
+            if (document.getElementById("others_buying").value == "0" && document.getElementById("other_profile").value == "3") {
+                absd.value = sixty_five_persant;
+            } else if (document.getElementById("others_buying").value == "1" && document.getElementById("other_profile").value == "3") {
+                absd.value = sixty_five_persant;
+            } else if (document.getElementById("others_buying").value == "2" && document.getElementById("other_profile").value == "3") {
+                absd.value = sixty_five_persant;
+            } else if (document.getElementById("others_buying").value == "3" && document.getElementById("other_profile").value == "3") {
+                absd.value = sixty_five_persant;
+            }
+            if (document.getElementById("others_buying2").value == "0" && document.getElementById("other_profile2").value == "3") {
+                absd.value = sixty_five_persant;
+            } else if (document.getElementById("others_buying2").value == "1" && document.getElementById("other_profile2").value == "3") {
+                absd.value = sixty_five_persant;
+            } else if (document.getElementById("others_buying2").value == "2" && document.getElementById("other_profile2").value == "3") {
+                absd.value = sixty_five_persant;
+            } else if (document.getElementById("others_buying2").value == "3" && document.getElementById("other_profile2").value == "3") {
+                absd.value = sixty_five_persant;
+            }
+        }
+
+        function proceed_btn() {
+            console.log(document.getElementById("current_date").value);
+            if (document.getElementById("current_date").value != "") {
+                var absd = document.getElementById("absd");
+                var amount_value = parseInt(document.getElementById("amount_value").value);
+                let twentypersant = (amount_value * 20) / 100;
+                let thertypersant = (amount_value * 30) / 100;
+                let fivepersant = (amount_value * 5) / 100;
+                let thirty = (amount_value * 30) / 100;
+                let thirtyfive = (amount_value * 35) / 100;
+                let sixty_persant = (amount_value * 60) / 100;
+                let sixty_five_persant = (amount_value * 65) / 100;
+                let fifty_persant = (amount_value * 50) / 100;
+                // single 
+                single(twentypersant, thertypersant, fivepersant, thirty, thirtyfive, sixty_persant, sixty_five_persant, absd);
+
+            }
+            jQuery(".more_option_model").removeClass("show_pop");
+        }
+        function proceed_btn1() {
+            if (document.getElementById("current_date").value != "") {
+                var absd = document.getElementById("absd");
+                var amount_value = parseInt(document.getElementById("amount_value").value);
+                let twentypersant = (amount_value * 20) / 100;
+                let thertypersant = (amount_value * 30) / 100;
+                let thirtyfive = (amount_value * 35) / 100;
+                let sixty_persant = (amount_value * 60) / 100;
+                let sixty_five_persant = (amount_value * 65) / 100;
+                let fifty_persant = (amount_value * 50) / 100;
+                // single
+                joint(twentypersant, thertypersant, fifty_persant, thirtyfive, sixty_persant, sixty_five_persant);
+            }
+            jQuery(".more_option_model").removeClass("show_pop");
+        }
+
+        function proceed_btn2() {
+            if (document.getElementById("current_date").value != "") {
+                var absd = document.getElementById("absd");
+                var amount_value = parseInt(document.getElementById("amount_value").value);
+                let twentypersant = (amount_value * 20) / 100;
+                let thertypersant = (amount_value * 30) / 100;
+                let fivepersant = (amount_value * 5) / 100;
+                let thirtyfive = (amount_value * 35) / 100;
+                let sixty_persant = (amount_value * 60) / 100;
+                let sixty_five_persant = (amount_value * 65) / 100;
+                // joint_others
+                joint_others(twentypersant, thertypersant, fivepersant, thirtyfive, sixty_persant, sixty_five_persant);
+            }
+            jQuery(".more_option_model").removeClass("show_pop");
+        }
+
+
+
+        function change_amount() {
+            let string_with_coomma = document.getElementById("amount_value").value;
+                 var num = string_with_coomma;
+                 var  amount_value = num.split(',').join('');
+                let dipositamount_result = (amount_value * 5) / 100;
+                let cancellation_result = (amount_value * 1.25) / 100;
+                let Refundable_result = (amount_value * 3.75) / 100;
+                document.getElementById("diposit_amount").value = dipositamount_result.toFixed(2);
+                document.getElementById("cancellation").value = cancellation_result.toFixed(2);
+                document.getElementById("refundable").value = Refundable_result.toFixed(2);
+
+            let currentDateValue = document.getElementById("current_date").value;
+            if (currentDateValue) {
+                let currentDate = new Date(currentDateValue);
+                // Adding 3 days
+                let threeDaysLater = new Date(currentDate);
+                threeDaysLater.setDate(currentDate.getDate() + 3);
+                document.getElementById("three_day").value = threeDaysLater.toISOString().split('T')[0];
+
+                // // Adding 21 days (3 weeks)
+                let twoWeeksLater = new Date(threeDaysLater);
+                twoWeeksLater.setDate(threeDaysLater.getDate() + 21);
+                document.getElementById("two_weeks").value = twoWeeksLater.toISOString().split('T')[0];
+
+                // Adding another 14 days
+                let completionDate = new Date(twoWeeksLater);
+                completionDate.setDate(twoWeeksLater.getDate() + 14);
+                document.getElementById("complation").value = completionDate.toISOString().split('T')[0];
+
+                // Setting 8-week date
+                let eightWeeksLater = new Date(currentDate);
+                eightWeeksLater.setDate(currentDate.getDate() + 56);
+                document.getElementById("eight_weeks").value = eightWeeksLater.toISOString().split('T')[0];
+
+                // Foundation stage (6 months from current date)
+                let stage = new Date(currentDate);
+                stage.setDate(stage.getDate() + 180); // 6 months
+                document.getElementById("stage").value = stage.toISOString().split('T')[0];
+
+                // 5% calculation
+                let five_persant = (amount_value * 5) / 100;
+                document.getElementById("five_persant").value = five_persant.toFixed(2);
+
+                // CPF total calculation
+                let seventy_five_persant = (amount_value * 75) / 100;
+                let cpf_total = amount_value - seventy_five_persant;
+                document.getElementById("total_cpf").value = cpf_total.toFixed(2);
+            }
+
+            // BSD calculation
+            function calculateBSD(price) {
+                let bsd = 0;
+                if (price <= 180000) {
+                    bsd = price * 0.01;
+                } else if (price <= 360000) {
+                    bsd = (price - 180000) * 0.02 + (180000 * 0.01);
+                } else if (price <= 1000000) {
+                    bsd = (price - 360000) * 0.03 + (180000 * 0.01) + (180000 * 0.02);
+                } else {
+                    bsd = (price - 1000000) * 0.04 + (640000 * 0.03) + (180000 * 0.02) + (180000 * 0.01);
+                }
+                return bsd;
+            }
+
+            const bsdValue = calculateBSD(amount_value);
+            document.getElementById("bsd1").value = `$${bsdValue.toFixed(2)}`;
+
+            let sum_abbsd = bsdValue + absd;
+
+            document.getElementById("bsd").value = sum_abbsd;
+            // Other amounts
+            let fifteenPercent = (amount_value * 15) / 100;
+            document.getElementById("fifteen_persant").value = fifteenPercent.toFixed(2);
+
+            let twentyPercent = (amount_value * 20) / 100;
+            let onePercent = (amount_value * 1) / 100;
+            let sdTotal = twentyPercent + onePercent;
+            document.getElementById("total_sd").value = sdTotal.toFixed(2);
+
+            document.getElementById("launch_date").value = currentDateValue;
+        }
+
+     
+        // Function to switch between tabs
+
+        function openCity(evt, cityName) {
+            let tabcontent = document.getElementsByClassName("content_tab");
+            for (let i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            let tablinks = document.getElementsByClassName("tab_button");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        
+        </script>
+        <!--  second calculator -->
+
+        <script>
+            const paymentData = [
+                { stage: "10% FOUNDATION", period: "6 Months", loanPercent: 5, interestRate: 0.027, principalPercent: 0.022 },
+                { stage: "10% FRAMEWORK", period: "6 Months", loanPercent: 10, interestRate: 0.04, principalPercent: 0.033 },
+                { stage: "5% WALL", period: "3 Months", loanPercent: 5, interestRate: 0.10, principalPercent: 0.088 },
+                { stage: "5% CEILING", period: "3 Months", loanPercent: 5, interestRate: 0.13, principalPercent: 0.11 },
+                { stage: "5% DOOR & WINDOW", period: "3 Months", loanPercent: 5, interestRate: 0.157, principalPercent: 0.14 },
+                { stage: "5% CAR PARK", period: "3 Months", loanPercent: 5, interestRate: 0.18, principalPercent: 0.15 },
+                { stage: "25% TOP", period: "12 Months", loanPercent: 25, interestRate: 0.062, principalPercent: 0.053 },
+                { stage: "15% CSC", period: "12 Months", loanPercent: 15, interestRate: 0.13, principalPercent: 0.11 }
+            ];
+    
+            function calculatePayments(bucPrice) {
+                return paymentData.map(item => {
+                    const loanDisbursed = (item.loanPercent / 100) * bucPrice;
+                    const monthlyInterest = (loanDisbursed * item.interestRate) / 12; // Monthly interest
+                    const monthlyPrincipal = (loanDisbursed * item.principalPercent) / 12; // Monthly principal
+                    const monthlyRepayment = (monthlyInterest + monthlyPrincipal);
+    
+                    return {
+                        ...item,
+                        loanDisbursed: Math.round(loanDisbursed.toFixed(2)),
+                        monthlyInterest: Math.round(monthlyInterest.toFixed(2)),
+                        monthlyPrincipal: Math.round(monthlyPrincipal.toFixed(2)),
+                        monthlyRepayment: monthlyRepayment.toFixed(0)
+                    };
+                });
+            }
+    
+            function renderTable(payments) {
+                const tableBody = document.getElementById('paymentTable');
+                tableBody.innerHTML = '';
+    
+                payments.forEach(item => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                    <td>${item.stage}</td>
+                    <td>${item.period}</td>
+                    <td>$0</td>
+                    <td>${item.loanPercent}%</td>
+                    <td>$${item.loanDisbursed}</td>
+                    <td>$${item.monthlyInterest}</td>
+                    <td>$${item.monthlyPrincipal}</td>
+                    <td>$${item.monthlyRepayment}</td>
+                `;
+    
+                    tableBody.appendChild(row);
+                });
+            }
+    
+            document.getElementById('bucInput').addEventListener('input', function () {
+                if(this.value == ''){
+                    document.getElementById("error_message").innerHTML = "Please Enter the Value!";
+                }else{
+                    const bucPrice = parseFloat(this.value);
+                        const payments = calculatePayments(bucPrice);
+                        renderTable(payments);
+                }
+                
+            });
+    
+            const initialBUCPrice = parseFloat(document.getElementById('bucInput').value);
+            
+            const initialPayments = calculatePayments(initialBUCPrice);
+            renderTable(initialPayments);
+        </script>
+        <!-- end second calculator -->
+
+
+    <script>
+        function openModel(evt, ModelName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab_content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab_links");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(ModelName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+    <script>
+        jQuery('.more_options').click(function () {
+            jQuery('.more_option_model').addClass('show_pop');
+            jQuery('html').removeClass('over_hide');
+        });
+        jQuery('.more_option_model').click(function () {
+            jQuery(this).removeClass('show_pop');
+            jQuery('html').removeClass('over_hide');
+        });
+        jQuery('.model_inner').click(function () {
+            event.stopPropagation();
+        });
+    </script>
+</body>
+
+</html>
