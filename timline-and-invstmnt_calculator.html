@@ -24,7 +24,7 @@
                 
                 <div class="buc_price">
                     <label>BUC Price</label>
-                    <input type="text" placeholder="Enter the bus price" id="amount_value" value="100000"
+                    <input type="text" placeholder="Enter the bus price" id="amount_value" oninput="amount_value_func()" value="100000"
                         class="dollar-icon-input">
                 </div>
                 <div class="Progressive-box-content">
@@ -101,7 +101,7 @@
                 </div>
                 <div class="Progressive-box-content">
                     <div class="vertical-tab light-dot-four">
-                        <div class="Progressive-content">
+                        <div class="Progressive-content"> 
                             <h6>Pay Stamp Duty (Cheque/CO/CPF)</h6>
                             <p>Ensure law firm apply CPF usage for stamp duty to IRAS + 15% completion, if applicable.
                                 Purchaser
@@ -196,9 +196,6 @@
                 <div class="container">
                     <input type="number" id="bucInput" value="10000" min="1000" />
                     <span id="error_message" style="color: red;"></span>
-            
-            
-            
                     <table border="1px solid black" align="center" style="border-collapse: collapse;">
                         <thead>
                             <tr>
@@ -734,9 +731,14 @@
             evt.currentTarget.className += " active";
         }
         
+        function  amount_value_func(){
+            var date = document.getElementById("current_date").value;
+            if(date != ''){
+                change_amount();
+            }
+        }
         </script>
         <!--  second calculator -->
-
         <script>
             const paymentData = [
                 { stage: "10% FOUNDATION", period: "6 Months", loanPercent: 5, interestRate: 0.027, principalPercent: 0.022 },
@@ -791,6 +793,7 @@
                 if(this.value == ''){
                     document.getElementById("error_message").innerHTML = "Please Enter the Value!";
                 }else{
+                    document.getElementById("error_message").innerHTML = " ";
                     const bucPrice = parseFloat(this.value);
                         const payments = calculatePayments(bucPrice);
                         renderTable(payments);
@@ -804,7 +807,6 @@
             renderTable(initialPayments);
         </script>
         <!-- end second calculator -->
-
 
     <script>
         function openModel(evt, ModelName) {
