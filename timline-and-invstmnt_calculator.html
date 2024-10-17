@@ -696,11 +696,8 @@
             }
 
             const bsdValue = calculateBSD(amount_value);
-            document.getElementById("bsd1").value = `$${bsdValue.toFixed(2)}`;
-
-            let sum_abbsd = bsdValue + absd;
-
-            document.getElementById("bsd").value = sum_abbsd;
+            document.getElementById("bsd1").value = `${bsdValue.toFixed(2)}`;
+            document.getElementById("bsd").value = bsdValue;
             // Other amounts
             let fifteenPercent = (amount_value * 15) / 100;
             document.getElementById("fifteen_persant").value = fifteenPercent.toFixed(2);
@@ -837,5 +834,4 @@
         });
     </script>
 </body>
-
 </html>
