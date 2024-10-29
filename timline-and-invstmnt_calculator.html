@@ -15,7 +15,7 @@ function project_investment_calculator() {
         <div class="buc_price">
             <label>BUC Price</label>
             <input type="text" placeholder="Enter the bus price" id="amount_value" oninput="amount_value_func()"
-            value="100,0000" class="dollar-icon-input">
+            value="1,000,000" class="dollar-icon-input">
             <input type="hidden" id="check_value_output" value="1">
         </div>
         <div class="Progressive-box-content">
@@ -382,6 +382,7 @@ function project_investment_calculator() {
         jQuery('.more_option_model').addClass('show_pop');
     })
     //this is the code when click on more option  sjcitijan
+
     let single = function sjCitijan(twentypersant, thertypersant, fivepersant, thirty, thirtyfive, sixty_persant,
         sixty_five_persant,bsd,total_cpf,total_sd,current) {
         if (document.getElementById("single_buying").value == "0" && document.getElementById("single_profile")
@@ -640,28 +641,31 @@ function project_investment_calculator() {
                   absd.value = sixty_five_persant;
         }
     }
-    
+       var value = 0;
+       var value1 = 0;
     let joint = function sjCitijan(twentypersant, thertypersant, fifty_persant,fivepersant, thirtyfive, sixty_persant, sixty_five_persant,bsd,total_cpf,total_sd) {
         // 1 sjcitijan
         if (document.getElementById("Joint_buying1").value == "0" && document.getElementById("Joint_profile")
         .value == "0") {
-        absd.value = "0";
+       // absd.value = "0";
+        value =0;
         } else if (document.getElementById("Joint_buying1").value == "1" && document.getElementById(
             "Joint_profile").value == "0") {
                 let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
+                let numnew = mainamountval;
                 let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
+                let newbsdval=calculateBSD_new_price(amount_value_main);
                 //alert(newbsdval)
-                 let five = parseInt(document.getElementById("five_persant").value);
-                  let total_bsd = twentypersant + bsd;
-                  let total_sd_new = newbsdval+twentypersant;
-                  let latest_sd_new = total_sd_new+twentypersant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                  document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = twentypersant;
+                let five = parseInt(document.getElementById("five_persant").value);
+                let total_bsd = twentypersant + bsd;
+                let total_sd_new = newbsdval+twentypersant;
+                let latest_sd_new = total_sd_new+twentypersant;
+                let total_cpf = latest_sd_new+five;
+                document.getElementById("bsd").value = total_sd_new;
+                document.getElementById("total_sd").value = latest_sd_new;
+                document.getElementById("total_cpf").value = total_cpf;
+              //  absd.value = twentypersant;
+                value = twentypersant;
         } else if (document.getElementById("Joint_buying1").value == "2" && document.getElementById(
             "Joint_profile").value == "0") {
                 let mainamountval=document.getElementById("amount_value").value;
@@ -677,7 +681,8 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                   document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = thertypersant;
+                 // absd.value = thertypersant;
+                  value = thertypersant;
         } else if (document.getElementById("Joint_buying1").value == "3" && document.getElementById(
             "Joint_profile").value == "0") {
                  let mainamountval=document.getElementById("amount_value").value;
@@ -693,13 +698,16 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                   document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = thertypersant;
+                 // absd.value = thertypersant;
+                  value = thertypersant;
         }
         if (document.getElementById("Joint_buying2").value == "0" && document.getElementById("Joint_profile2")
         .value == "0") {
-        absd.value = "0";
+      //  absd.value = "0";
+        value2 = 0;
         } else if (document.getElementById("Joint_buying2").value == "1" && document.getElementById(
             "Joint_profile2").value == "0") {
+                value1 = twentypersant;
                  let mainamountval=document.getElementById("amount_value").value;
                let numnew = mainamountval;
                 let amount_value_main = numnew.split(',').join('');
@@ -713,7 +721,7 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                   document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = twentypersant;
+                 // absd.value = twentypersant;
         } else if (document.getElementById("Joint_buying2").value == "2" && document.getElementById(
             "Joint_profile2").value == "0") {
                let mainamountval=document.getElementById("amount_value").value;
@@ -729,7 +737,8 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                   document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = thertypersant;
+                 // absd.value = thertypersant;
+                  value1 = thertypersant;
         } else if (document.getElementById("Joint_buying2").value == "3" && document.getElementById(
             "Joint_profile2").value == "0") {
               let mainamountval=document.getElementById("amount_value").value;
@@ -745,7 +754,8 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                   document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = thertypersant;
+                  //absd.value = thertypersant;
+                  value1 = thertypersant;
         }
         // 2 singa pur pr
         if (document.getElementById("Joint_buying1").value == "0" && document.getElementById("Joint_profile")
@@ -763,7 +773,8 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                    document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = fivepersant;
+               //   absd.value = fivepersant;
+                  value1 = fivepersant;
         } else if (document.getElementById("Joint_buying1").value == "1" && document.getElementById(
             "Joint_profile").value == "1") {
                 let mainamountval=document.getElementById("amount_value").value;
@@ -779,7 +790,8 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                    document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = thertypersant;
+                  //absd.value = thertypersant;
+                  value = thertypersant;
         } else if (document.getElementById("Joint_buying1").value == "2" && document.getElementById(
             "Joint_profile").value == "1") {
                   let mainamountval=document.getElementById("amount_value").value;
@@ -795,7 +807,8 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                    document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = thirtyfive;
+                 // absd.value = thirtyfive;
+                  value = thertypersant;
         } else if (document.getElementById("Joint_buying1").value == "3" && document.getElementById(
             "Joint_profile").value == "1") {
                   let mainamountval=document.getElementById("amount_value").value;
@@ -811,7 +824,8 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                    document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = thirtyfive;
+                 // absd.value = thirtyfive;
+                  value = thertypersant;
         }
         if (document.getElementById("Joint_buying2").value == "0" && document.getElementById("Joint_profile2")
         .value == "1") {
@@ -828,7 +842,8 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                    document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = fivepersant;
+                 // absd.value = fivepersant;
+                  value1 = fivepersant;
         } else if (document.getElementById("Joint_buying2").value == "1" && document.getElementById(
             "Joint_profile2").value == "1") {
                 let mainamountval=document.getElementById("amount_value").value;
@@ -844,7 +859,8 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                    document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = thertypersant;
+                 // absd.value = thertypersant;
+                  value1 = thertypersant;
         } else if (document.getElementById("Joint_buying2").value == "2" && document.getElementById(
             "Joint_profile2").value == "1") {
                 let five = parseInt(document.getElementById("five_persant").value);
@@ -858,7 +874,8 @@ function project_investment_calculator() {
                 document.getElementById("bsd").value = thirtyfive + bsd;
                 document.getElementById("total_sd").value = latest_sd_new;
                 document.getElementById("total_cpf").value = total_cpf;
-                absd.value = thirtyfive;
+               // absd.value = thirtyfive;
+                value1 = thirtyfive;
         } else if (document.getElementById("Joint_buying2").value == "3" && document.getElementById(
             "Joint_profile2").value == "1") {
                 let mainamountval=document.getElementById("amount_value").value;
@@ -874,7 +891,8 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                    document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = thirtyfive;
+                 // absd.value = thirtyfive;
+                  value1 = thirtyfive;
         }
         // 3  forginner 
         if (document.getElementById("Joint_buying1").value == "0" && document.getElementById("Joint_profile")
@@ -892,7 +910,8 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                    document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = sixty_persant;
+                  //absd.value = sixty_persant;
+                  value = sixty_persant
         } else if (document.getElementById("Joint_buying1").value == "1" && document.getElementById(
             "Joint_profile").value == "3") {
         let mainamountval=document.getElementById("amount_value").value;
@@ -908,7 +927,8 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                    document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = sixty_persant
+                //  absd.value = sixty_persant
+                  value = sixty_persant
         } else if (document.getElementById("Joint_buying1").value == "2" && document.getElementById(
             "Joint_profile").value == "3") {
        let mainamountval=document.getElementById("amount_value").value;
@@ -924,7 +944,8 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                    document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = sixty_persant
+                 // absd.value = sixty_persant
+                  value = sixty_persant
         } else if (document.getElementById("Joint_buying1").value == "3" && document.getElementById(
             "Joint_profile").value == "3") {
         let mainamountval=document.getElementById("amount_value").value;
@@ -940,7 +961,8 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                    document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = sixty_persant
+                  //absd.value = sixty_persant
+                  value = sixty_persant
         }
         if (document.getElementById("Joint_buying2").value == "0" && document.getElementById("Joint_profile2")
         .value == "3") {
@@ -957,7 +979,8 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                    document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = sixty_persant;
+                  //absd.value = sixty_persant;
+                  value1 = sixty_persant;
         } else if (document.getElementById("Joint_buying2").value == "1" && document.getElementById(
             "Joint_profile2").value == "3") {
         let mainamountval=document.getElementById("amount_value").value;
@@ -973,7 +996,8 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                    document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = sixty_persant
+                  //absd.value = sixty_persant
+                  value1 = sixty_persant;
         } else if (document.getElementById("Joint_buying2").value == "2" && document.getElementById(
             "Joint_profile2").value == "3") {
          let mainamountval=document.getElementById("amount_value").value;
@@ -989,7 +1013,8 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                    document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = sixty_persant
+                 // absd.value = sixty_persant
+                  value1 = sixty_persant;
         } else if (document.getElementById("Joint_buying2").value == "3" && document.getElementById(
             "Joint_profile2").value == "3") {
         let mainamountval=document.getElementById("amount_value").value;
@@ -1005,7 +1030,8 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                    document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = sixty_persant
+                 // absd.value = sixty_persant
+                  value1 = sixty_persant;
         }
         // 4 
         if (document.getElementById("Joint_buying1").value == "0" && document.getElementById("Joint_profile")
@@ -1023,7 +1049,8 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                    document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = sixty_five_persant;
+                 // absd.value = sixty_five_persant;
+                  value = sixty_five_persant;
         } else if (document.getElementById("Joint_buying1").value == "1" && document.getElementById(
             "Joint_profile").value == "3") {
    let mainamountval=document.getElementById("amount_value").value;
@@ -1039,7 +1066,8 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                    document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = sixty_five_persant;
+                 // absd.value = sixty_five_persant;
+                  value = sixty_five_persant;
         } else if (document.getElementById("Joint_buying1").value == "2" && document.getElementById(
             "Joint_profile").value == "3") {
    let mainamountval=document.getElementById("amount_value").value;
@@ -1056,6 +1084,7 @@ function project_investment_calculator() {
                    document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
                   absd.value = sixty_five_persant;
+                  value = sixty_five_persant;
         } else if (document.getElementById("Joint_buying1").value == "3" && document.getElementById(
             "Joint_profile").value == "3") {
    let mainamountval=document.getElementById("amount_value").value;
@@ -1071,7 +1100,8 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                    document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = sixty_five_persant;
+                 // absd.value = sixty_five_persant;
+                  value = sixty_five_persant;
         }
         if (document.getElementById("Joint_buying2").value == "0" && document.getElementById("Joint_profile2")
         .value == "3") {
@@ -1088,7 +1118,8 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                    document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = sixty_five_persant;
+                 // absd.value = sixty_five_persant;
+                  value1 = sixty_five_persant;
         } else if (document.getElementById("Joint_buying2").value == "1" && document.getElementById(
             "Joint_profile2").value == "3") {
         let mainamountval=document.getElementById("amount_value").value;
@@ -1104,7 +1135,8 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                    document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = sixty_five_persant;
+                 // absd.value = sixty_five_persant;
+                  value1 = sixty_five_persant;
         } else if (document.getElementById("Joint_buying2").value == "2" && document.getElementById(
             "Joint_profile2").value == "3") {
         let mainamountval=document.getElementById("amount_value").value;
@@ -1120,7 +1152,8 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                    document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = sixty_five_persant;
+                 // absd.value = sixty_five_persant;
+                  value1 = sixty_five_persant;
         } else if (document.getElementById("Joint_buying2").value == "3" && document.getElementById(
             "Joint_profile2").value == "3") {
         let mainamountval=document.getElementById("amount_value").value;
@@ -1136,35 +1169,18 @@ function project_investment_calculator() {
                   document.getElementById("bsd").value = total_sd_new;
                    document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
-                  absd.value = sixty_five_persant;
+                 // absd.value = sixty_five_persant;
+                  value1 = sixty_five_persant;
         }
-        // 5 
-        if (document.getElementById("Joint_buying1").value == "0" && document.getElementById("Joint_profile")
-        .value == "4") {
-        absd.value = sixty_persant;
-        } else if (document.getElementById("Joint_buying1").value == "1" && document.getElementById(
-            "Joint_profile").value == "4") {
-        absd.value = sixty_persant;
-        } else if (document.getElementById("Joint_buying1").value == "2" && document.getElementById(
-            "Joint_profile").value == "4") {
-        absd.value = sixty_persant;
-        } else if (document.getElementById("Joint_buying1").value == "3" && document.getElementById(
-            "Joint_profile").value == "4") {
-        absd.value = sixty_persant;
-        }
-        if (document.getElementById("Joint_buying2").value == "0" && document.getElementById("Joint_profile2")
-        .value == "4") {
-        absd.value = sixty_persant;
-        } else if (document.getElementById("Joint_buying2").value == "1" && document.getElementById(
-            "Joint_profile2").value == "4") {
-        absd.value = sixty_persant;
-        } else if (document.getElementById("Joint_buying2").value == "2" && document.getElementById(
-            "Joint_profile2").value == "4") {
-        absd.value = sixty_persant;
-        } else if (document.getElementById("Joint_buying2").value == "3" && document.getElementById(
-            "Joint_profile2").value == "4") {
-        absd.value = sixty_persant;
-        }
+
+         alert(value);
+         alert(value1);
+
+        let maxValue = Math.max(value, value1);
+         absd.value = maxValue;
+        console.log('value====>>', absd.value)
+        // document.getElementById("absd").innerHTML(maxValue)
+        // alert(maxValue);
     }
     
     let joint_others = function sjCitijan(twentypersant, thertypersant, fivepersant, thirtyfive, sixty_persant,
@@ -1497,7 +1513,7 @@ function project_investment_calculator() {
                   absd.value = sixty_persant;
         } else if (document.getElementById("others_buying2").value == "2" && document.getElementById(
             "other_profile2").value == "2") {
-                   let mainamountval=document.getElementById("amount_value").value;
+               let mainamountval=document.getElementById("amount_value").value;
                let numnew = mainamountval;
                 let amount_value_main = numnew.split(',').join('');
                let newbsdval=calculateBSD_new_price(amount_value_main);
@@ -1812,7 +1828,6 @@ function project_investment_calculator() {
         document.getElementById("launch_date").value = currentDateValue;
     }
     
-    // Function to switch between tabs
     function openCity(evt, cityName) {
         let tabcontent = document.getElementsByClassName("content_tab");
         for (let i = 0; i < tabcontent.length; i++) {
@@ -2015,8 +2030,8 @@ function project_investment_calculator() {
     renderTable(initialPayments);
   </script>
     
-    <?php 
-        return ob_get_clean();
-    }
-    add_shortcode('project_investment_calculator', 'project_investment_calculator');
+<?php 
+    return ob_get_clean();
+}
+add_shortcode('project_investment_calculator', 'project_investment_calculator');
   
