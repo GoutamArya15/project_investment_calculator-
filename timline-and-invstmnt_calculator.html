@@ -45,7 +45,7 @@ function project_investment_calculator() {
                     <input type="text" id="cancellation" readonly placeholder="0" class="dollar-icon-input">
                 </div>
                 <div class="form_group">
-                    <label>Refundable (3.75%)</label>
+                     <label>Refundable (3.75%)</label>
                     <input type="text" id="refundable" readonly placeholder="0" class="dollar-icon-input">
                 </div>
                 </div>
@@ -394,7 +394,7 @@ function project_investment_calculator() {
                let numnew = mainamountval;
                 let amount_value_main = numnew.split(',').join('');
                let newbsdval=calculateBSD_new_price(amount_value_main);
-  //               alert(newbsdval)
+  //            alert(newbsdval)
                  let five = parseInt(document.getElementById("five_persant").value);
                   let total_bsd = twentypersant + bsd;
                   let total_sd_new = newbsdval+twentypersant;
@@ -404,17 +404,16 @@ function project_investment_calculator() {
                   document.getElementById("total_sd").value = latest_sd_new;
                   document.getElementById("total_cpf").value = total_cpf;
                   absd.value = twentypersant;
-                    
         } else if (document.getElementById("single_buying").value == "2" && document.getElementById(
             "single_profile").value == "0") {
                 let mainamountval=document.getElementById("amount_value").value;
+                  let total_bsd = twentypersant + newbsdval;
                let numnew = mainamountval;
                 let amount_value_main = numnew.split(',').join('');
                let newbsdval=calculateBSD_new_price(amount_value_main);
                  let five = parseInt(document.getElementById("five_persant").value);
                     let total_sd_new = newbsdval+thirty;
                     //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
                   let latest_sd_new=total_bsd +thirty;
                   let total_cpf = latest_sd_new+five;
                   document.getElementById("bsd").value = total_sd_new;
@@ -643,1084 +642,255 @@ function project_investment_calculator() {
     }
        var value1 = 0;
        var value2 = 0;
-    let joint = function sjCitijan(twentypersant, thertypersant, fifty_persant,fivepersant, thirtyfive, sixty_persant, sixty_five_persant,bsd,total_cpf,total_sd) {
+       let joint = function sjCitijan(twentypersant, thertypersant, fifty_persant,fivepersant, thirtyfive, sixty_persant, sixty_five_persant,bsd,total_cpf,total_sd) {
         // 1 sjcitijan
         if (document.getElementById("Joint_buying1").value == "0" && document.getElementById("Joint_profile")
         .value == "0") {
-       // absd.value = "0";
         value1 =0;
-        } else if (document.getElementById("Joint_buying1").value == "1" && document.getElementById(
+        }else if (document.getElementById("Joint_buying1").value == "1" && document.getElementById(
             "Joint_profile").value == "0") {
-                let mainamountval=document.getElementById("amount_value").value;
-                let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-                let newbsdval=calculateBSD_new_price(amount_value_main);
-                //alert(newbsdval)
-                let five = parseInt(document.getElementById("five_persant").value);
-                let total_bsd = twentypersant + bsd;
-                let total_sd_new = newbsdval+twentypersant;
-                let latest_sd_new = total_sd_new+twentypersant;
-                let total_cpf = latest_sd_new+five;
-                document.getElementById("bsd").value = total_sd_new;
-                document.getElementById("total_sd").value = latest_sd_new;
-                document.getElementById("total_cpf").value = total_cpf;
-              //  absd.value = twentypersant;
-                value1 = twentypersant;
+                  value1 = twentypersant;
         } else if (document.getElementById("Joint_buying1").value == "2" && document.getElementById(
             "Joint_profile").value == "0") {
-                let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-               // alert(newbsdval)
-                 let five = parseInt(document.getElementById("five_persant").value);
-                  let total_bsd = twentypersant + bsd;
-                  let total_sd_new = newbsdval+thertypersant;
-                  let latest_sd_new = total_sd_new+thertypersant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                  document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = thertypersant;
                   value1 = thertypersant;
-        } else if (document.getElementById("Joint_buying1").value == "3" && document.getElementById(
+        }  else if (document.getElementById("Joint_buying1").value == "3" && document.getElementById(
             "Joint_profile").value == "0") {
-                 let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-               // alert(newbsdval)
-                 let five = parseInt(document.getElementById("five_persant").value);
-                  let total_bsd = twentypersant + bsd;
-                  let total_sd_new = newbsdval+thertypersant;
-                  let latest_sd_new = total_sd_new+thertypersant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                  document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = thertypersant;
                   value1 = thertypersant;
         }
         if (document.getElementById("Joint_buying2").value == "0" && document.getElementById("Joint_profile2")
         .value == "0") {
-      //  absd.value = "0";
         value2 = 0;
-        } else if (document.getElementById("Joint_buying2").value == "1" && document.getElementById(
+        }else if (document.getElementById("Joint_buying2").value == "1" && document.getElementById(
             "Joint_profile2").value == "0") {
-                value2 = twentypersant;
-                 let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-               // alert(newbsdval)
-                 let five = parseInt(document.getElementById("five_persant").value);
-                  let total_bsd = twentypersant + bsd;
-                  let total_sd_new = newbsdval+twentypersant;
-                  let latest_sd_new = total_sd_new+twentypersant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                  document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = twentypersant;
-        } else if (document.getElementById("Joint_buying2").value == "2" && document.getElementById(
+                  value2 = twentypersant;
+        }  else if (document.getElementById("Joint_buying2").value == "2" && document.getElementById(
             "Joint_profile2").value == "0") {
-               let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-               // alert(newbsdval)
-                 let five = parseInt(document.getElementById("five_persant").value);
-                  let total_bsd = twentypersant + bsd;
-                  let total_sd_new = newbsdval+thertypersant;
-                  let latest_sd_new = total_sd_new+thertypersant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                  document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = thertypersant;
                   value2 = thertypersant;
         } else if (document.getElementById("Joint_buying2").value == "3" && document.getElementById(
             "Joint_profile2").value == "0") {
-              let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-               // alert(newbsdval)
-                 let five = parseInt(document.getElementById("five_persant").value);
-                  let total_bsd = twentypersant + bsd;
-                  let total_sd_new = newbsdval+thertypersant;
-                  let latest_sd_new = total_sd_new+thertypersant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                  document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                  //absd.value = thertypersant;
                   value2 = thertypersant;
         }
         // 2 singa pur pr
         if (document.getElementById("Joint_buying1").value == "0" && document.getElementById("Joint_profile")
         .value == "1") {
-                let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+fivepersant;
-            //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +fivepersant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-               //   absd.value = fivepersant;
                   value1 = fivepersant;
         } else if (document.getElementById("Joint_buying1").value == "1" && document.getElementById(
             "Joint_profile").value == "1") {
-                let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+thertypersant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +thertypersant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                  //absd.value = thertypersant;
                   value1 = thertypersant;
         } else if (document.getElementById("Joint_buying1").value == "2" && document.getElementById(
             "Joint_profile").value == "1") {
-                  let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+thirtyfive;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +thirtyfive;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = thirtyfive;
-                  value1 = thertypersant;
+                  value1 = thirtyfive;
         } else if (document.getElementById("Joint_buying1").value == "3" && document.getElementById(
             "Joint_profile").value == "1") {
-                  let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+thirtyfive;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +thirtyfive;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = thirtyfive;
-                  value1 = thertypersant;
+                  value1 = thirtyfive;
         }
         if (document.getElementById("Joint_buying2").value == "0" && document.getElementById("Joint_profile2")
         .value == "1") {
-                let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+fivepersant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +fivepersant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = fivepersant;
                   value2 = fivepersant;
         } else if (document.getElementById("Joint_buying2").value == "1" && document.getElementById(
             "Joint_profile2").value == "1") {
-                let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+thertypersant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +thertypersant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = thertypersant;
                   value2 = thertypersant;
         } else if (document.getElementById("Joint_buying2").value == "2" && document.getElementById(
             "Joint_profile2").value == "1") {
-                let five = parseInt(document.getElementById("five_persant").value);
-                let mainamountval=document.getElementById("amount_value").value;
-                let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-                let newbsdval=calculateBSD_new_price(amount_value_main);
-                let total_sd_new = newbsdval+twentypersant;
-                let latest_sd_new=total_sd_new+thirtyfive;
-                let total_cpf = latest_sd_new+five;
-                document.getElementById("bsd").value = thirtyfive + bsd;
-                document.getElementById("total_sd").value = latest_sd_new;
-                document.getElementById("total_cpf").value = total_cpf;
-               // absd.value = thirtyfive;
                 value2 = thirtyfive;
         } else if (document.getElementById("Joint_buying2").value == "3" && document.getElementById(
             "Joint_profile2").value == "1") {
-                let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+thirtyfive;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +thirtyfive;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = thirtyfive;
                   value2 = thirtyfive;
         }
         // 3  forginner 
         if (document.getElementById("Joint_buying1").value == "0" && document.getElementById("Joint_profile")
         .value == "2") {
-             let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                  //absd.value = sixty_persant;
                   value1 = sixty_persant
         } else if (document.getElementById("Joint_buying1").value == "1" && document.getElementById(
-            "Joint_profile").value == "3") {
-        let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                //  absd.value = sixty_persant
+            "Joint_profile").value == "2") {
                   value1 = sixty_persant
         } else if (document.getElementById("Joint_buying1").value == "2" && document.getElementById(
-            "Joint_profile").value == "3") {
-       let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = sixty_persant
+            "Joint_profile").value == "2") {
                   value1 = sixty_persant
         } else if (document.getElementById("Joint_buying1").value == "3" && document.getElementById(
-            "Joint_profile").value == "3") {
-        let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                  //absd.value = sixty_persant
+            "Joint_profile").value == "2") {
                   value1 = sixty_persant
         }
         if (document.getElementById("Joint_buying2").value == "0" && document.getElementById("Joint_profile2")
-        .value == "3") {
-        let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                  //absd.value = sixty_persant;
+        .value == "2") {
                   value2 = sixty_persant;
         } else if (document.getElementById("Joint_buying2").value == "1" && document.getElementById(
-            "Joint_profile2").value == "3") {
-        let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                  //absd.value = sixty_persant
+            "Joint_profile2").value == "2") {
                   value2 = sixty_persant;
         } else if (document.getElementById("Joint_buying2").value == "2" && document.getElementById(
-            "Joint_profile2").value == "3") {
-         let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = sixty_persant
+            "Joint_profile2").value == "2") {
                   value2 = sixty_persant;
         } else if (document.getElementById("Joint_buying2").value == "3" && document.getElementById(
+            "Joint_profile2").value == "2") {
+                  value2 = sixty_persant;
+        }
+        // 4 company enttity
+        if (document.getElementById("Joint_buying1").value == "0" && document.getElementById("Joint_profile")
+        .value == "3") {
+                  value1 = sixty_five_persant;
+        } else if (document.getElementById("Joint_buying1").value == "1" && document.getElementById(
+            "Joint_profile").value == "3") {
+                  value1 = sixty_five_persant;
+        } else if (document.getElementById("Joint_buying1").value == "2" && document.getElementById(
+            "Joint_profile").value == "3") {
+                  value1 = sixty_five_persant;
+        } else if (document.getElementById("Joint_buying1").value == "3" && document.getElementById(
+            "Joint_profile").value == "3") {
+                  value1 = sixty_five_persant;
+        }
+        if (document.getElementById("Joint_buying2").value == "0" && document.getElementById("Joint_profile2")
+        .value == "3") {
+                  value2 = sixty_five_persant;
+        } else if (document.getElementById("Joint_buying2").value == "1" && document.getElementById(
             "Joint_profile2").value == "3") {
-        let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = sixty_persant
+                  value2 = sixty_five_persant;
+        } else if (document.getElementById("Joint_buying2").value == "2" && document.getElementById(
+            "Joint_profile2").value == "3") {
+                  value2 = sixty_five_persant;
+        } else if (document.getElementById("Joint_buying2").value == "3" && document.getElementById(
+            "Joint_profile2").value == "3") {
+                  value2 = sixty_five_persant;
+        }
+    let mainamountval=document.getElementById("amount_value").value;
+    let numnew = mainamountval;
+    let amount_value_main = numnew.split(',').join('');
+    let newbsdval=calculateBSD_new_price(amount_value_main);
+    let total_outlay = newbsdval+twentypersant;
+    let five = parseInt(document.getElementById("five_persant").value);
+    let maxValue = Math.max(value1, value2);
+    absd.value = maxValue;
+    let total_sd_new = newbsdval+maxValue;
+    let total_bsd = twentypersant + maxValue;
+    let latest_sd_new=total_outlay +maxValue;
+    let total_cpf2 = latest_sd_new+five;
+    document.getElementById("bsd").value = total_sd_new;
+    document.getElementById("total_sd").value = latest_sd_new;
+     document.getElementById("total_cpf").value = total_cpf2;	   
+}
+      let joint_others = function sjCitijan(twentypersant, thertypersant, fivepersant, thirtyfive, sixty_persant, sixty_five_persant) {
+        if (document.getElementById("others_buying").value == "0" && document.getElementById("other_profile").value == "0") {
+        value1 =0;
+        } else if (document.getElementById("others_buying").value == "1" && document.getElementById(
+            "other_profile").value == "0") {
+                value1 = twentypersant;
+        } else if (document.getElementById("others_buying").value == "2" && document.getElementById(
+            "other_profile").value == "0") {
+                  value1 = thertypersant;
+        } else if (document.getElementById("others_buying").value == "3" && document.getElementById(
+            "other_profile").value == "0") {
+                  value1 = thertypersant;
+        }
+        if (document.getElementById("others_buying2").value == "0" && document.getElementById("other_profile2")
+        .value == "0") {
+        value2 = 0;
+        } else if (document.getElementById("others_buying2").value == "1" && document.getElementById(
+            "other_profile2").value == "0") {
+                value2 = twentypersant;
+        } else if (document.getElementById("others_buying2").value == "2" && document.getElementById(
+            "other_profile2").value == "0") {
+                  value2 = thertypersant;
+        } else if (document.getElementById("others_buying2").value == "3" && document.getElementById(
+            "other_profile2").value == "0") {
+                  value2 = thertypersant;
+        }
+        // 2 singa pur pr
+        if (document.getElementById("others_buying").value == "0" && document.getElementById("other_profile")
+        .value == "1") {
+                  value1 = fivepersant;
+        } else if (document.getElementById("others_buying").value == "1" && document.getElementById(
+            "other_profile").value == "1") {
+                  value1 = thertypersant;
+        } else if (document.getElementById("others_buying").value == "2" && document.getElementById(
+            "other_profile").value == "1") {
+                  value1 = thertypersant;
+        } else if (document.getElementById("others_buying").value == "3" && document.getElementById(
+            "other_profile").value == "1") {
+                  value1 = thertypersant;
+        }
+        if (document.getElementById("others_buying2").value == "0" && document.getElementById("other_profile2")
+        .value == "1") {
+                  value2 = fivepersant;
+        } else if (document.getElementById("others_buying2").value == "1" && document.getElementById(
+            "other_profile2").value == "1") {
+                  value2 = thertypersant;
+        } else if (document.getElementById("others_buying2").value == "2" && document.getElementById(
+            "other_profile2").value == "1") {
+                value2 = thertypersant;
+        } else if (document.getElementById("others_buying2").value == "3" && document.getElementById(
+            "other_profile2").value == "1") {
+                  value2 = thirtyfive;
+        }
+        // 3  forginner 
+        if (document.getElementById("others_buying").value == "0" && document.getElementById("other_profile")
+        .value == "2") {
+                  value1 = sixty_persant
+        } else if (document.getElementById("others_buying").value == "1" && document.getElementById(
+            "other_profile").value == "2") {
+                  value1 = sixty_persant
+        } else if (document.getElementById("others_buying").value == "2" && document.getElementById(
+            "other_profile").value == "2") {
+                  value1 = sixty_persant
+        } else if (document.getElementById("others_buying").value == "3" && document.getElementById(
+            "other_profile").value == "2") {
+                  value1 = sixty_persant
+        }
+        if (document.getElementById("others_buying2").value == "0" && document.getElementById("other_profile2")
+        .value == "3") {
+                  value2 = sixty_persant;
+        } else if (document.getElementById("others_buying2").value == "1" && document.getElementById(
+            "other_profile2").value == "2") {
+                  value2 = sixty_persant;
+        } else if (document.getElementById("others_buying2").value == "2" && document.getElementById(
+            "other_profile2").value == "2") {
+                  value2 = sixty_persant;
+        } else if (document.getElementById("others_buying2").value == "3" && document.getElementById(
+            "other_profile2").value == "2") {
                   value2 = sixty_persant;
         }
         // 4 
-        if (document.getElementById("Joint_buying1").value == "0" && document.getElementById("Joint_profile")
+        if (document.getElementById("others_buying").value == "0" && document.getElementById("other_profile")
         .value == "3") {
-   let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_five_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_five_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = sixty_five_persant;
                   value1 = sixty_five_persant;
-        } else if (document.getElementById("Joint_buying1").value == "1" && document.getElementById(
-            "Joint_profile").value == "3") {
-   let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_five_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_five_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = sixty_five_persant;
+        } else if (document.getElementById("others_buying").value == "1" && document.getElementById(
+            "other_profile").value == "3") {
                   value1 = sixty_five_persant;
-        } else if (document.getElementById("Joint_buying1").value == "2" && document.getElementById(
-            "Joint_profile").value == "3") {
-   let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_five_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_five_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                  //absd.value = sixty_five_persant;
+        } else if (document.getElementById("others_buying").value == "2" && document.getElementById(
+            "other_profile").value == "3") {
                   value1 = sixty_five_persant;
-        } else if (document.getElementById("Joint_buying1").value == "3" && document.getElementById(
-            "Joint_profile").value == "3") {
-                let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_five_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_five_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = sixty_five_persant;
+        } else if (document.getElementById("others_buying").value == "3" && document.getElementById(
+            "other_profile").value == "3") {
                   value1 = sixty_five_persant;
         }
-        if (document.getElementById("Joint_buying2").value == "0" && document.getElementById("Joint_profile2")
+        if (document.getElementById("others_buying2").value == "0" && document.getElementById("other_profile2")
         .value == "3") {
-         let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_five_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_five_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = sixty_five_persant;
                   value2 = sixty_five_persant;
-        } else if (document.getElementById("Joint_buying2").value == "1" && document.getElementById(
-            "Joint_profile2").value == "3") {
-        let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_five_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_five_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = sixty_five_persant;
+        } else if (document.getElementById("others_buying2").value == "1" && document.getElementById(
+            "other_profile2").value == "3") {
                   value2 = sixty_five_persant;
-        } else if (document.getElementById("Joint_buying2").value == "2" && document.getElementById(
-            "Joint_profile2").value == "3") {
-        let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_five_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_five_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = sixty_five_persant;
+        } else if (document.getElementById("others_buying2").value == "2" && document.getElementById(
+            "other_profile2").value == "3") {
                   value2 = sixty_five_persant;
-        } else if (document.getElementById("Joint_buying2").value == "3" && document.getElementById(
-            "Joint_profile2").value == "3") {
-        let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_five_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_five_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = sixty_five_persant;
+        } else if (document.getElementById("others_buying2").value == "3" && document.getElementById(
+            "other_profile2").value == "3") {
                   value2 = sixty_five_persant;
         }
 
-          alert(value1);
-     alert(value2);
-
-        let maxValue = Math.max(value1, value2);
-         absd.value = maxValue;
-        console.log('value====>>', absd.value)
-        // document.getElementById("absd").innerHTML(maxValue)
-        // alert(maxValue);
-    }
+    let mainamountval=document.getElementById("amount_value").value;
+    let numnew = mainamountval;
+    let amount_value_main = numnew.split(',').join('');
+    let newbsdval=calculateBSD_new_price(amount_value_main);
+    let total_outlay = newbsdval+twentypersant;
+    let five = parseInt(document.getElementById("five_persant").value);
     
-    let joint_others = function sjCitijan(twentypersant, thertypersant, fivepersant, thirtyfive, sixty_persant, sixty_five_persant) {
-        // 1 sjcitijan
-        if (document.getElementById("others_buying").value == "0" && document.getElementById("Joint_profile")
-        .value == "0") {
-       // absd.value = "0";
-        value1 =0;
-        } else if (document.getElementById("others_buying").value == "1" && document.getElementById(
-            "Joint_profile").value == "0") {
-                let mainamountval=document.getElementById("amount_value").value;
-                let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-                let newbsdval=calculateBSD_new_price(amount_value_main);
-                //alert(newbsdval)
-                let five = parseInt(document.getElementById("five_persant").value);
-                let total_bsd = twentypersant + bsd;
-                let total_sd_new = newbsdval+twentypersant;
-                let latest_sd_new = total_sd_new+twentypersant;
-                let total_cpf = latest_sd_new+five;
-                document.getElementById("bsd").value = total_sd_new;
-                document.getElementById("total_sd").value = latest_sd_new;
-                document.getElementById("total_cpf").value = total_cpf;
-              //  absd.value = twentypersant;
-                value1 = twentypersant;
-        } else if (document.getElementById("others_buying").value == "2" && document.getElementById(
-            "Joint_profile").value == "0") {
-                let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-               // alert(newbsdval)
-                 let five = parseInt(document.getElementById("five_persant").value);
-                  let total_bsd = twentypersant + bsd;
-                  let total_sd_new = newbsdval+thertypersant;
-                  let latest_sd_new = total_sd_new+thertypersant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                  document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = thertypersant;
-                  value1 = thertypersant;
-        } else if (document.getElementById("others_buying").value == "3" && document.getElementById(
-            "Joint_profile").value == "0") {
-                 let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-               // alert(newbsdval)
-                 let five = parseInt(document.getElementById("five_persant").value);
-                  let total_bsd = twentypersant + bsd;
-                  let total_sd_new = newbsdval+thertypersant;
-                  let latest_sd_new = total_sd_new+thertypersant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                  document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = thertypersant;
-                  value1 = thertypersant;
-        }
-        if (document.getElementById("others_buying2").value == "0" && document.getElementById("other_profile2")
-        .value == "0") {
-      //  absd.value = "0";
-        value2 = 0;
-        } else if (document.getElementById("others_buying2").value == "1" && document.getElementById(
-            "other_profile2").value == "0") {
-                value2 = twentypersant;
-                 let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-               // alert(newbsdval)
-                 let five = parseInt(document.getElementById("five_persant").value);
-                  let total_bsd = twentypersant + bsd;
-                  let total_sd_new = newbsdval+twentypersant;
-                  let latest_sd_new = total_sd_new+twentypersant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                  document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = twentypersant;
-        } else if (document.getElementById("others_buying2").value == "2" && document.getElementById(
-            "other_profile2").value == "0") {
-               let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-               // alert(newbsdval)
-                 let five = parseInt(document.getElementById("five_persant").value);
-                  let total_bsd = twentypersant + bsd;
-                  let total_sd_new = newbsdval+thertypersant;
-                  let latest_sd_new = total_sd_new+thertypersant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                  document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = thertypersant;
-                  value2 = thertypersant;
-        } else if (document.getElementById("others_buying2").value == "3" && document.getElementById(
-            "other_profile2").value == "0") {
-              let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-               // alert(newbsdval)
-                 let five = parseInt(document.getElementById("five_persant").value);
-                  let total_bsd = twentypersant + bsd;
-                  let total_sd_new = newbsdval+thertypersant;
-                  let latest_sd_new = total_sd_new+thertypersant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                  document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                  //absd.value = thertypersant;
-                  value2 = thertypersant;
-        }
-        // 2 singa pur pr
-        if (document.getElementById("others_buying").value == "0" && document.getElementById("Joint_profile")
-        .value == "1") {
-                let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+fivepersant;
-            //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +fivepersant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-               //   absd.value = fivepersant;
-                  value1 = fivepersant;
-        } else if (document.getElementById("others_buying").value == "1" && document.getElementById(
-            "Joint_profile").value == "1") {
-                let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+thertypersant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +thertypersant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                  //absd.value = thertypersant;
-                  value1 = thertypersant;
-        } else if (document.getElementById("others_buying").value == "2" && document.getElementById(
-            "Joint_profile").value == "1") {
-                  let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+thirtyfive;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +thirtyfive;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = thirtyfive;
-                  value1 = thertypersant;
-        } else if (document.getElementById("others_buying").value == "3" && document.getElementById(
-            "Joint_profile").value == "1") {
-                  let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+thirtyfive;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +thirtyfive;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = thirtyfive;
-                  value1 = thertypersant;
-        }
-        if (document.getElementById("others_buying2").value == "0" && document.getElementById("other_profile2")
-        .value == "1") {
-                let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+fivepersant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +fivepersant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = fivepersant;
-                  value2 = fivepersant;
-        } else if (document.getElementById("others_buying2").value == "1" && document.getElementById(
-            "other_profile2").value == "1") {
-                let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+thertypersant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +thertypersant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = thertypersant;
-                  value2 = thertypersant;
-        } else if (document.getElementById("others_buying2").value == "2" && document.getElementById(
-            "other_profile2").value == "1") {
-                let five = parseInt(document.getElementById("five_persant").value);
-                let mainamountval=document.getElementById("amount_value").value;
-                let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-                let newbsdval=calculateBSD_new_price(amount_value_main);
-                let total_sd_new = newbsdval+twentypersant;
-                let latest_sd_new=total_sd_new+thirtyfive;
-                let total_cpf = latest_sd_new+five;
-                document.getElementById("bsd").value = thirtyfive + bsd;
-                document.getElementById("total_sd").value = latest_sd_new;
-                document.getElementById("total_cpf").value = total_cpf;
-               // absd.value = thirtyfive;
-                value2 = thirtyfive;
-        } else if (document.getElementById("others_buying2").value == "3" && document.getElementById(
-            "other_profile2").value == "1") {
-                let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+thirtyfive;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +thirtyfive;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = thirtyfive;
-                  value2 = thirtyfive;
-        }
-        // 3  forginner 
-        if (document.getElementById("others_buying").value == "0" && document.getElementById("Joint_profile")
-        .value == "2") {
-             let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                  //absd.value = sixty_persant;
-                  value1 = sixty_persant
-        } else if (document.getElementById("others_buying").value == "1" && document.getElementById(
-            "Joint_profile").value == "3") {
-        let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                //  absd.value = sixty_persant
-                  value1 = sixty_persant
-        } else if (document.getElementById("others_buying").value == "2" && document.getElementById(
-            "Joint_profile").value == "3") {
-       let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = sixty_persant
-                  value1 = sixty_persant
-        } else if (document.getElementById("others_buying").value == "3" && document.getElementById(
-            "Joint_profile").value == "3") {
-        let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                  //absd.value = sixty_persant
-                  value1 = sixty_persant
-        }
-        if (document.getElementById("others_buying2").value == "0" && document.getElementById("other_profile2")
-        .value == "3") {
-        let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                  //absd.value = sixty_persant;
-                  value2 = sixty_persant;
-        } else if (document.getElementById("others_buying2").value == "1" && document.getElementById(
-            "other_profile2").value == "3") {
-        let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                  //absd.value = sixty_persant
-                  value2 = sixty_persant;
-        } else if (document.getElementById("others_buying2").value == "2" && document.getElementById(
-            "other_profile2").value == "3") {
-         let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = sixty_persant
-                  value2 = sixty_persant;
-        } else if (document.getElementById("others_buying2").value == "3" && document.getElementById(
-            "other_profile2").value == "3") {
-        let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = sixty_persant
-                  value2 = sixty_persant;
-        }
-        // 4 
-        if (document.getElementById("others_buying").value == "0" && document.getElementById("Joint_profile")
-        .value == "3") {
-   let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_five_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_five_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = sixty_five_persant;
-                  value1 = sixty_five_persant;
-        } else if (document.getElementById("others_buying").value == "1" && document.getElementById(
-            "Joint_profile").value == "3") {
-   let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_five_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_five_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = sixty_five_persant;
-                  value1 = sixty_five_persant;
-        } else if (document.getElementById("others_buying").value == "2" && document.getElementById(
-            "Joint_profile").value == "3") {
-   let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_five_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_five_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = sixty_five_persant;
-                  value1 = sixty_five_persant;
-        } else if (document.getElementById("others_buying").value == "3" && document.getElementById(
-            "Joint_profile").value == "3") {
-   let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_five_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_five_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = sixty_five_persant;
-                  value1 = sixty_five_persant;
-        }
-        if (document.getElementById("others_buying2").value == "0" && document.getElementById("other_profile2")
-        .value == "3") {
-         let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_five_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_five_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = sixty_five_persant;
-                  value2 = sixty_five_persant;
-        } else if (document.getElementById("others_buying2").value == "1" && document.getElementById(
-            "other_profile2").value == "3") {
-        let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_five_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_five_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = sixty_five_persant;
-                  value2 = sixty_five_persant;
-        } else if (document.getElementById("others_buying2").value == "2" && document.getElementById(
-            "other_profile2").value == "3") {
-        let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_five_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_five_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = sixty_five_persant;
-                  value2 = sixty_five_persant;
-        } else if (document.getElementById("others_buying2").value == "3" && document.getElementById(
-            "other_profile2").value == "3") {
-        let mainamountval=document.getElementById("amount_value").value;
-               let numnew = mainamountval;
-                let amount_value_main = numnew.split(',').join('');
-               let newbsdval=calculateBSD_new_price(amount_value_main);
-                 let five = parseInt(document.getElementById("five_persant").value);
-                    let total_sd_new = newbsdval+sixty_five_persant;
-                    //alert(newbsdval)
-                  let total_bsd = twentypersant + newbsdval;
-                  let latest_sd_new=total_bsd +sixty_five_persant;
-                  let total_cpf = latest_sd_new+five;
-                  document.getElementById("bsd").value = total_sd_new;
-                   document.getElementById("total_sd").value = latest_sd_new;
-                  document.getElementById("total_cpf").value = total_cpf;
-                 // absd.value = sixty_five_persant;
-                  value2 = sixty_five_persant;
-        }
-
-          alert(value1);
-     alert(value2);
-
-        let maxValue = Math.max(value1, value2);
-         absd.value = maxValue;
-        console.log('value====>>', absd.value)
-        // document.getElementById("absd").innerHTML(maxValue)
-        // alert(maxValue);
+    let maxValue = Math.max(value1, value2);
+    absd.value = maxValue;
+    let total_sd_new = newbsdval+maxValue;
+    let total_bsd = twentypersant + maxValue;
+    let latest_sd_new=total_outlay +maxValue;
+    let total_cpf2 = latest_sd_new+five;
+    document.getElementById("bsd").value = total_sd_new;
+    document.getElementById("total_sd").value = latest_sd_new;
+     document.getElementById("total_cpf").value = total_cpf2;	  
     }
     
     function proceed_btn(elem) {
@@ -1884,7 +1054,7 @@ function project_investment_calculator() {
         for (let i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
-    
+        
         document.getElementById(cityName).style.display = "block";
         evt.currentTarget.className += " active";
     }
@@ -2075,7 +1245,6 @@ function project_investment_calculator() {
     const initialPayments = calculatePayments(initialBUCPrice);
     renderTable(initialPayments);
   </script>
-    
 <?php 
     return ob_get_clean();
 }
